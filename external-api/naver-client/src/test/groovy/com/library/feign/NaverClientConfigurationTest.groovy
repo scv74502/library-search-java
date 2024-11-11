@@ -1,4 +1,5 @@
-import com.library.feign.NaverClient
+package com.library.feign
+
 import com.library.feign.NaverClientConfiguration
 import feign.RequestTemplate
 import spock.lang.Specification

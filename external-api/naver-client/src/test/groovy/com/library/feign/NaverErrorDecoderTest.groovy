@@ -1,8 +1,9 @@
+package com.library.feign
+
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.library.NaverErrorResponse
 import com.library.feign.NaverErrorDecoder
 import feign.Request
-import feign.RequestTemplate
 import feign.Response
 import spock.lang.Specification
 
