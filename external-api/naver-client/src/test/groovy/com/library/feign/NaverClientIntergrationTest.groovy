@@ -9,7 +9,7 @@ import org.springframework.test.context.ActiveProfiles
 import spock.lang.Ignore
 import spock.lang.Specification
 
-@Ignore
+//@Ignore
 @SpringBootTest(classes = NaverClientIntergrationTest.TestConfig.class)
 @ActiveProfiles("test")
 class NaverClientIntergrationTest extends Specification {
@@ -27,6 +27,6 @@ class NaverClientIntergrationTest extends Specification {
 
         then:
         print response
-//        response.total == 33
+        response.total == 33
     }
 }
