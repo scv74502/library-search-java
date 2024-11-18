@@ -9,8 +9,10 @@ class DailyStatTest extends Specification {
         given:
         def givenQuery = "HTTP"
         def givenLocalDateTime = LocalDateTime.of(2024, 1, 1, 1, 1, 1)
+
         when:
         def result = new DailyStat(query: givenQuery, eventDateTime: givenLocalDateTime)
+
         then:
         verifyAll(result){
             query == givenQuery
