@@ -55,4 +55,12 @@ class BookApplicationServiceTest extends Specification {
                 assert date == givenDate
         }
     }
+
+    def "findTop5Query 메서드 호출시, dailyStatQueryService의 findTop5Query가 실행된다."() {
+        when:
+        bookApplicationService.findTop5Query()
+
+        then:
+        1 * dailyStatQueryService.findTop5Query()
+    }
 }
