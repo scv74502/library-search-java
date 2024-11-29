@@ -8,6 +8,6 @@ public record Meta(
         @JsonProperty("pageable_count")
         int pageableCount,
         @JsonProperty("total_count")
-        long totalCount
+        int totalCount
 ) {
 }

@@ -12,7 +12,7 @@ import lombok.ToString;
 @Schema(description = "검색 요청을 위한 모델")
 public class SearchRequest {
     // 50 자
-    @Size(max = 50, message = "query 입력은 최대 50자를 최대할 수 없습니다")
+    @Size(max = 50, message = "query 입력은 최대 50자를 초과할 수 없습니다")
     @NotBlank(message = "query 입력은 비어있을 수 없습니다")
     @Schema(description = "검색쿼리", example = "HTTP", requiredMode = Schema.RequiredMode.REQUIRED, maxLength = 50)
     private String query;

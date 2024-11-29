@@ -59,6 +59,7 @@ class BookControllerItTest extends Specification {
                 .param("size", request.size.toString()))
 
         then:
+
         result.andExpect(status().isBadRequest())
                 .andExpect(jsonPath('$.errorMessage').value("query 입력은 비어있을 수 없습니다"))
     }
@@ -75,7 +76,7 @@ class BookControllerItTest extends Specification {
 
         then:
         result.andExpect(status().isBadRequest())
-                .andExpect(jsonPath('$.errorMessage').value("page number must bigger than 1"))
+                .andExpect(jsonPath('$.errorMessage').value("페이지번호는 1이상이어야 합니다."))
     }
 
     def "size가 50을 초과하면 BadRequest 응답반환된다."() {
@@ -90,6 +91,6 @@ class BookControllerItTest extends Specification {
 
         then:
         result.andExpect(status().isBadRequest())
-                .andExpect(jsonPath('$.errorMessage').value("page size number must smaller than 50"))
+                .andExpect(jsonPath('$.errorMessage').value("페이지크기는 50이하여야 합니다."))
     }
 }
