@@ -2,7 +2,9 @@ spring:
   profiles:
     active: local
   config:
-    import: application-naver-client.yaml
+    import:
+      - application-naver-client.yaml
+      - application-kakao-client.yaml
   h2:
     console:
       enabled: true

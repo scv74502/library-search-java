@@ -4,4 +4,6 @@ include 'external-api'
 include 'common'
 include 'external-api:naver-client'
 findProject(':external-api:naver-client')?.name = 'naver-client'
+include 'external-api:kakao-client'
+findProject(':external-api:kakao-client')?.name = 'kakao-client'
 
