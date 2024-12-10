@@ -13,5 +13,6 @@ public record PageResult<T> (
         @Schema(description = "전체 요소수", example = "100")
         int totalElements,
         @Schema(description = "본문")
-        List<T> contents){
+        List<T> contents
+){
 }
